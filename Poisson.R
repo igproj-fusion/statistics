@@ -11,10 +11,7 @@ dat <- rpois(n = N, lambda = Lamda)
 
 # Computes confidence intervals by "DescTools"
 #
-df <- as.data.frame(table(dat))
-df$dat <- as.numeric(levels(df$dat)[df$dat])
-x <- sum(df$dat * df$Freq)
-PoissonCI(x = x, n = N, method = c("exact", "score", "wald", "byar"))
+PoissonCI(x = sum(dat), n = N, method = c("exact", "score", "wald", "byar"))
 
 
 # estimates parameters by Rstan
