@@ -1,6 +1,6 @@
 library(rstan)
 
-# generates data for simlation 
+# generates data for simulation 
 #
 N <- 1000
 p <- 0.508
